@@ -1,0 +1,35 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #244751;
+  background-color: #eeeeee;
+  width: 600px;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+body .container {
+  width: 93%;
+  background-color: #ffffff;
+  position: relative;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding: 80px 0px;
+}
