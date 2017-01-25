@@ -12,11 +12,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-<<<<<<< HEAD
     "created_at": 1461154232227
-=======
-    "created_at": 1461116232227
->>>>>>> d453909373182723ff734be1bc22d7fa9ec86911
   },
   {
     "user": {
@@ -30,11 +26,7 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-<<<<<<< HEAD
     "created_at": 1461154959088
-=======
-    "created_at": 1461113959088
->>>>>>> d453909373182723ff734be1bc22d7fa9ec86911
   },
   {
     "user": {
@@ -49,10 +41,6 @@
     "content": {
       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
     },
-<<<<<<< HEAD
     "created_at": 1461154796368
-=======
-    "created_at": 1461113796368
->>>>>>> d453909373182723ff734be1bc22d7fa9ec86911
   }
 ]
