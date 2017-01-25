@@ -4,23 +4,33 @@
   border: 1px solid #000000;
   border-radius: 15px;
   padding: 0px 10px 10px 10px;
-  position: relative; }
-  .new-tweet h2 {
+  position: relative;
+
+  h2 {
     border-bottom: 1px solid #000000;
     padding-bottom: 0px;
-    margin-bottom: 15px; }
-  .new-tweet form {
-    margin-bottom: 5px; }
-  .new-tweet textarea {
+    margin-bottom: 15px;
+  }
+
+  form {
+    margin-bottom: 5px;
+    }
+
+  textarea {
     width: 465px;
     padding: 5px;
-    margin-bottom: 5px; }
-  .new-tweet input {
+    margin-bottom: 5px;
+  }
+
+  input {
     position: relative;
-    top: 2px; }
-  .new-tweet .counter {
+    top: 2px;
+  }
+
+  .counter {
     float: right;
     position: relative;
-    top: 2px; }
+    top: 2px;
+  }
+}
 
-/*# sourceMappingURL=new-tweet.css.map */

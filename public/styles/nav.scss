@@ -1,0 +1,43 @@
+#nav-bar {
+    height: 80px;
+    width: 36%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #00a087;
+    padding: 0px 2em 0px 2em;
+
+  .logo {
+    height: 80px;
+    width: 80px;
+    float: left;
+  }
+
+  .header {
+    color: #e8fdff;
+    float: left;
+    font-size: 200%;
+    line-height: 238%;
+    margin-left: 10px;
+  }
+
+  button {
+    height: 75%;
+    width: 120px;
+    position: relative;
+    top: 12%;
+    float: right;
+    opacity: 0.85;
+    font-size: 22px;
+    border-radius: 15px;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+}

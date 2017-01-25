@@ -1,58 +1,43 @@
 body #tweets-container {
   position: relative;
   border-radius: 15px;
-  padding-left: 0px;
-}
+  padding-left: 0px; }
+  body #tweets-container article {
+    width: 485px;
+    margin: 2.2em;
+    border: 1px solid #909090;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    opacity: 0.85; }
+  body #tweets-container article:hover {
+    opacity: 1.0; }
+  body #tweets-container header {
+    background-color: #E0E0E0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 5px 0px 5px; }
+  body #tweets-container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px; }
+  body #tweets-container header > h1 {
+    display: inline;
+    position: relative;
+    bottom: 25px;
+    padding-left: 5px;
+    font-size: 28px; }
+  body #tweets-container header > span {
+    font-size: 14px;
+    color: #787878;
+    float: right;
+    position: relative;
+    top: 11px; }
+  body #tweets-container div {
+    height: 120px;
+    font-size: 28px;
+    padding: 5px; }
+  body #tweets-container footer {
+    border-top: 1px solid #E0E0E0;
+    padding: 5px; }
 
-body #tweets-container article {
-  width: 485px;
-  margin: 2.2em;
-  border: 1px solid #909090;
-  border-radius: 15px;
-  padding-bottom: 20px;
-  opacity: 0.85;
-}
-
-body #tweets-container article:hover {
-  opacity: 1.0;
-}
-
-body #tweets-container header {
-  background-color: #E0E0E0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  padding: 5px 5px 0px 5px;
-}
-
-body #tweets-container img {
-  height: 50px;
-  width: 50px;
-  border-radius: 15px;
-}
-
-body #tweets-container header > h1 {
-  display: inline;
-  position: relative;
-  bottom: 25px;
-  padding-left: 5px;
-  font-size: 28px;
-}
-
-body #tweets-container header > span {
-  font-size: 14px;
-  color: #787878;
-  float: right;
-  position: relative;
-  top: 11px;
-}
-
-body #tweets-container div {
-  height: 120px;
-  font-size: 28px;
-  padding: 5px;
-}
-
-body #tweets-container footer {
-  border-top: 1px solid #E0E0E0;
-  padding: 5px;
-}
+/*# sourceMappingURL=tweets-container.css.map */
