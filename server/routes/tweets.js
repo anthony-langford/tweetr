@@ -41,6 +41,11 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  tweetsRoutes.put("/", function(req, res) {
+    /* error stuff */
+    /* what goes in here? */
+  })
+
   return tweetsRoutes;
 
 }

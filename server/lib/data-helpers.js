@@ -25,5 +25,13 @@ module.exports = function makeDataHelpers(db) {
       });
     }
 
+    updateTweet: function(callback) {
+      db.collection("tweets").findOneAndUpdate(/* find by name or something and then update likes */)
+      if (err) {
+        return callback(err);
+      }
+      callback(/* what goes in here? */);
+    }
+
   };
 }
