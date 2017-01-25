@@ -8,8 +8,8 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   color: #244751;
   background-color: #eeeeee;
-  width: 600px;
-  margin: 0; }
+  width: 36%;
+  margin: auto; }
   body .container {
     width: 93%;
     background-color: #ffffff;

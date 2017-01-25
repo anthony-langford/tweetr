@@ -6,7 +6,8 @@
   left: 0;
   z-index: 1030;
   background-color: #00a087;
-  padding: 0px 2em 0px 2em; }
+  padding: 0px 2em 0px 2em;
+  margin: auto; }
   #nav-bar .logo {
     height: 80px;
     width: 80px;
@@ -19,15 +20,19 @@
     margin-left: 10px; }
   #nav-bar button {
     height: 75%;
-    width: 120px;
+    width: 125px;
     position: relative;
     top: 12%;
     float: right;
     opacity: 0.85;
     font-size: 22px;
-    border-radius: 15px; }
+    border-radius: 15px;
+    color: #00a087;
+    background-color: #e8fdff;
+    border: 1px solid #000000; }
   #nav-bar button:hover {
-    opacity: 1; }
+    opacity: 1;
+    background-color: #ffffff; }
   #nav-bar button:focus {
     outline: 0; }
 
