@@ -24,15 +24,20 @@
 }
 
 #nav-bar button {
-  height: 80%;
+  height: 75%;
   width: 120px;
   position: relative;
-  top: 10%;
+  top: 12%;
   float: right;
   opacity: 0.85;
   font-size: 22px;
+  border-radius: 15px;
 }
 
 #nav-bar button:hover {
   opacity: 1;
+}
+
+#nav-bar button:focus {
+  outline: 0;
 }

@@ -1,5 +1,5 @@
 .new-tweet {
-  margin: 2em;
+  margin: 2.2em;
   width: 485px;
   border: 1px solid #000000;
   border-radius: 15px;
@@ -9,15 +9,28 @@
 
 .new-tweet h2 {
   border-bottom: 1px solid #000000;
+  padding-bottom: 0px;
+  margin-bottom: 15px;
 }
+
+.new-tweet form {
+  margin-bottom: 5px;
+  }
 
 .new-tweet textarea {
   width: 465px;
   padding: 5px;
+  margin-bottom: 5px;
+}
+
+.new-tweet input {
+  position: relative;
+  top: 2px;
 }
 
 .new-tweet .counter {
-  position: absolute;
-  bottom: 10px;
-  right: 15px;
+  float: right;
+  position: relative;
+  top: 2px;
 }
+

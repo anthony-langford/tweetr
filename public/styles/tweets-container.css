@@ -1,11 +1,12 @@
 body #tweets-container {
   position: relative;
   border-radius: 15px;
+  padding-left: 0px;
 }
 
 body #tweets-container article {
   width: 485px;
-  margin: 2em;
+  margin: 2.2em;
   border: 1px solid #909090;
   border-radius: 15px;
   padding-bottom: 20px;
@@ -34,11 +35,15 @@ body #tweets-container header > h1 {
   position: relative;
   bottom: 25px;
   padding-left: 5px;
+  font-size: 28px;
 }
 
 body #tweets-container header > span {
-  font-size: 18px;
+  font-size: 14px;
+  color: #787878;
   float: right;
+  position: relative;
+  top: 11px;
 }
 
 body #tweets-container div {

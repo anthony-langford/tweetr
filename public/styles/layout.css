@@ -15,21 +15,15 @@ html {
  */
 
 body {
-<<<<<<< HEAD
   font-family: 'Roboto Condensed', sans-serif;
   color: #244751;
   background-color: #eeeeee;
   width: 600px;
-=======
   margin: 0;
-  color: #244751;
-  background-color: #eee;
->>>>>>> d453909373182723ff734be1bc22d7fa9ec86911
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
-<<<<<<< HEAD
  */
 
 body .container {
@@ -37,9 +31,6 @@ body .container {
   background-color: #ffffff;
   position: relative;
   margin-left: 4%;
-  margin-right: 4%;
-  padding: 80px 0px;
+  margin-right: 3%;
+  padding: 80px 0px 10px 0px;
 }
-=======
- */
->>>>>>> d453909373182723ff734be1bc22d7fa9ec86911

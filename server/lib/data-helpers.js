@@ -6,19 +6,22 @@ module.exports = function makeDataHelpers(db) {
 
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
-      simulateDelay(() => {
-        db.tweets.push(newTweet);
-        callback(null, true);
+      db.collection("tweets").insertOne(newTweet, (err, result) => {
+        if (err) {
+          return callback(err);
+        }
+        console.log("Inserted a document into the restaurants collection.");
+        callback();
       });
     },
 
     // Get all tweets in `db`
     getTweets: function(callback) {
-      db.collection("tweets").find().toArray((err, tweets) => {
+      db.collection("tweets").find().toArray((err, tweet) => {
         if (err) {
-          return callback(err)
+          return callback(err);
         }
-        callback(null, tweets);
+        callback(null, tweet);
       });
     }
 
