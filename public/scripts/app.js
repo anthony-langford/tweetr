@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+<<<<<<< HEAD
 
 // Test / driver code (temporary). Eventually will get this from the server.
 // Fake data taken from tweets.json
@@ -160,3 +161,5 @@ $(document).ready(function() {
 });
 
 
+=======
+>>>>>>> d453909373182723ff734be1bc22d7fa9ec86911
