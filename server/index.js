@@ -6,9 +6,16 @@ const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
+const cookieSession = require('cookie-session');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(cookieSession({
+  name: 'session',
+  keys: ['secretpassword', 'supersecretpassword'],
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
 
 // MongoDB
 const db = require('mongodb').MongoClient;

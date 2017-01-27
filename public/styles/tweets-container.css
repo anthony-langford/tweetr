@@ -39,5 +39,7 @@ body #tweets-container {
   body #tweets-container footer {
     border-top: 1px solid #E0E0E0;
     padding: 5px; }
+  body #tweets-container i {
+    float: right; }
 
 /*# sourceMappingURL=tweets-container.css.map */

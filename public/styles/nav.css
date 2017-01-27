@@ -1,39 +1,84 @@
 #nav-bar {
   height: 80px;
-  width: 36%;
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 999;
   background-color: #00a087;
   padding: 0px 2em 0px 2em;
   margin: auto; }
   #nav-bar .logo {
     height: 80px;
     width: 80px;
-    float: left; }
+    float: left;
+    z-index: 1000; }
   #nav-bar .header {
     color: #e8fdff;
     float: left;
     font-size: 200%;
     line-height: 238%;
-    margin-left: 10px; }
-  #nav-bar button {
+    margin-left: 10px;
+    z-index: 1000; }
+  #nav-bar .register {
+    position: absolute;
+    left: 33%;
+    margin: 10px 0px 0px 0px;
+    z-index: 1000; }
+  #nav-bar .registerField {
+    width: 150px;
+    z-index: 1000; }
+  #nav-bar .registerButton {
+    width: 60px;
+    z-index: 1000; }
+  #nav-bar .login {
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    margin: 15px 0px 0px 0px;
+    z-index: 1000; }
+  #nav-bar .loginField {
+    width: 150px;
+    z-index: 1000; }
+  #nav-bar .loginButton {
+    width: 60px;
+    z-index: 1000; }
+  #nav-bar .logoutButton {
+    display: none;
     height: 75%;
     width: 125px;
-    position: relative;
+    position: absolute;
+    right: 150px;
     top: 12%;
-    float: right;
     opacity: 0.85;
     font-size: 22px;
     border-radius: 15px;
     color: #00a087;
     background-color: #e8fdff;
-    border: 1px solid #000000; }
-  #nav-bar button:hover {
+    border: 1px solid #000000;
+    z-index: 1000; }
+  #nav-bar .logoutButton:hover {
     opacity: 1;
     background-color: #ffffff; }
-  #nav-bar button:focus {
+  #nav-bar .logoutButton:active {
+    outline: 0; }
+  #nav-bar .composeButton {
+    display: none;
+    height: 75%;
+    width: 125px;
+    position: absolute;
+    right: 10px;
+    top: 12%;
+    opacity: 0.85;
+    font-size: 22px;
+    border-radius: 15px;
+    color: #00a087;
+    background-color: #e8fdff;
+    border: 1px solid #000000;
+    z-index: 1000; }
+  #nav-bar .composeButton:hover {
+    opacity: 1;
+    background-color: #ffffff; }
+  #nav-bar .composeButton:focus {
     outline: 0; }
 
 /*# sourceMappingURL=nav.css.map */

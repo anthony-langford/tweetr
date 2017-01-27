@@ -1,10 +1,10 @@
 #nav-bar {
     height: 80px;
-    width: 36%;
+    // width: 36%;
     position: fixed;
     right: 0;
     left: 0;
-    z-index: 1030;
+    z-index: 999;
     background-color: #00a087;
     padding: 0px 2em 0px 2em;
     margin: auto;
@@ -13,6 +13,7 @@
     height: 80px;
     width: 80px;
     float: left;
+    z-index: 1000;
   }
 
   .header {
@@ -21,28 +22,91 @@
     font-size: 200%;
     line-height: 238%;
     margin-left: 10px;
+    z-index: 1000;
   }
 
-  button {
+  .register {
+    position: absolute;
+    left: 33%;
+    margin: 10px 0px 0px 0px;
+    z-index: 1000;
+  }
+
+    .registerField {
+      width: 150px;
+      z-index: 1000;
+    }
+
+    .registerButton {
+      width: 60px;
+      z-index: 1000;
+    }
+
+  .login {
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    margin: 15px 0px 0px 0px;
+    z-index: 1000;
+  }
+
+     .loginField {
+      width: 150px;
+      z-index: 1000;
+    }
+
+    .loginButton {
+      width: 60px;
+      z-index: 1000;
+    }
+
+  .logoutButton {
+    display: none;
     height: 75%;
     width: 125px;
-    position: relative;
+    position: absolute;
+    right: 150px;
     top: 12%;
-    float: right;
     opacity: 0.85;
     font-size: 22px;
     border-radius: 15px;
     color: #00a087;
     background-color: #e8fdff;
     border: 1px solid #000000;
+    z-index: 1000;
   }
 
-  button:hover {
+  .logoutButton:hover {
     opacity: 1;
     background-color: #ffffff;
   }
 
-  button:focus {
+  .logoutButton:active {
+    outline: 0;
+  }
+
+  .composeButton {
+    display: none;
+    height: 75%;
+    width: 125px;
+    position: absolute;
+    right: 10px;
+    top: 12%;
+    opacity: 0.85;
+    font-size: 22px;
+    border-radius: 15px;
+    color: #00a087;
+    background-color: #e8fdff;
+    border: 1px solid #000000;
+    z-index: 1000;
+  }
+
+  .composeButton:hover {
+    opacity: 1;
+    background-color: #ffffff;
+  }
+
+  .composeButton:focus {
     outline: 0;
   }
 }
