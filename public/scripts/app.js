@@ -151,6 +151,10 @@ $(document).ready(function() {
             $("alert").remove();
           }
           userLoggedIn = true;
+          composeButton.show();
+          logoutButton.show();
+          loginButton.hide();
+          registerButton.hide();
           console.log("Successful user registration");
           loadTweets();
         },
@@ -187,6 +191,10 @@ $(document).ready(function() {
           }
           console.log("Successful login");
           userLoggedIn = true;
+          composeButton.show();
+          logoutButton.show();
+          loginButton.hide();
+          registerButton.hide();
           loadTweets();
         },
         error: function() {
@@ -212,6 +220,10 @@ $(document).ready(function() {
         success: function() {
           console.log("Successful logout");
           userLoggedIn = false;
+          composeButton.hide();
+          logoutButton.hide();
+          loginButton.show();
+          registerButton.show();
         }
       });
     });
