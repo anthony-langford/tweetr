@@ -43,21 +43,10 @@ module.exports = function(DataHelpers) {
   });
 
   tweetsRoutes.post("/register", function(req, res) {
-    // if (!req.body.name) {
-    //   res.status(400).json({ error: 'invalid request: no data in POST body' });
-    //   return;
-    // }
-
-    // check if email and password are provided, and if email is free to register
-    // if (!request.body.user_id || !request.body.password) {
-    //   response.status(400).send('Sorry! You need to provide both an email and a password.');
-    // }
-
-    // for (let user in users) {
-    //   if (users[user].email === request.body.email) {
-    //     response.status(400).send('Sorry! That email address has already been registered. If you think this is a mistake, please contact us somehow.');
-    //   }
-    // }
+    if (!req.body.name) {
+      res.status(400).json({ error: 'invalid request: no data in POST body' });
+      return;
+    }
 
     const newUser = {
       name: req.body.name,
@@ -70,7 +59,7 @@ module.exports = function(DataHelpers) {
         res.status(500).json({ error: err.message });
       } else {
         req.session.user = req.body.handle;
-        res.status(201).end();
+        res.status(201).redirect("/");
       }
     });
   });

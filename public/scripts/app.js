@@ -1,20 +1,22 @@
 $(document).ready(function() {
   let composeButton = $(".composeButton");
   let loginButton = $(".loginButton");
+  let login = $(".login");
   let registerButton = $(".register .submitButton");
+  let register = $(".register");
   let logoutButton = $(".logoutButton");
   let userLoggedIn = false;
 
   if (userLoggedIn === true) {
     composeButton.show();
     logoutButton.show();
-    loginButton.hide();
-    registerButton.hide();
+    login.hide();
+    register.hide();
   } else {
     composeButton.hide();
     logoutButton.hide();
-    loginButton.show();
-    registerButton.show();
+    login.show();
+    register.show();
   }
 
   function createTweetElement(tweet) {
@@ -153,8 +155,8 @@ $(document).ready(function() {
           userLoggedIn = true;
           composeButton.show();
           logoutButton.show();
-          loginButton.hide();
-          registerButton.hide();
+          login.hide();
+          register.hide();
           console.log("Successful user registration");
           loadTweets();
         },
@@ -193,8 +195,8 @@ $(document).ready(function() {
           userLoggedIn = true;
           composeButton.show();
           logoutButton.show();
-          loginButton.hide();
-          registerButton.hide();
+          login.hide();
+          register.hide();
           loadTweets();
         },
         error: function() {
@@ -222,8 +224,8 @@ $(document).ready(function() {
           userLoggedIn = false;
           composeButton.hide();
           logoutButton.hide();
-          loginButton.show();
-          registerButton.show();
+          login.show();
+          register.show();
         }
       });
     });
