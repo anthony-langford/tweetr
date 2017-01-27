@@ -231,10 +231,7 @@ $(document).ready(function() {
 
   $(function() {
     $("#tweets-container").on("click", ".likeButton", function() {
-      var likesArray = $(this).data("likes"); // how to access 'this' tweet article (parent?)
-      // if (user is in likesArray) {
-      //   toggle like button
-      // }
+      var likesArray = $(this).data("likes");
       $(this).toggleClass('fa-heart-o fa-heart');
       // let tweetId = $(this).parents(".tweet").data("id");
       // $.ajax({

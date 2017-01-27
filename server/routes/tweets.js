@@ -23,7 +23,7 @@ module.exports = function(DataHelpers) {
       return;
     }
 
-    const user = req.body.user; // ? req.body.user : userHelper.generateRandomUser();
+    const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,
       content: {
@@ -88,10 +88,10 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  // tweetsRoutes.post("/logout", function(req, res) {
-  //   req.session = null;
-  //   res.status(200).end();
-  // });
+  tweetsRoutes.post("/logout", function(req, res) {
+    req.session = null;
+    res.status(200).end();
+  });
 
   // tweetsRoutes.post("/like", function(req, res) {
   //   DataHelpers.updateLike(req.body.tweetId, req.session.user, (err) => {
