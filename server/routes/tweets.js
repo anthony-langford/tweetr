@@ -33,7 +33,7 @@ module.exports = function(DataHelpers) {
       likes: []
     };
 
-    DataHelpers.saveTweet(tweet, (err) => {
+    DataHelpers.saveTweet(tweet, (err, tweet) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
@@ -48,9 +48,15 @@ module.exports = function(DataHelpers) {
       return;
     }
 
+    let randomAvatar = {};
+
+    randomAvatar = userHelper.generateRandomAvatar(req.body.handle);
+    console.log(randomAvatar);
+
     const newUser = {
       name: req.body.name,
       handle: req.body.handle,
+      avatar: randomAvatar,
       created_at: Date.now()
     };
 
@@ -71,8 +77,7 @@ module.exports = function(DataHelpers) {
         res.status(500).json({ error: err.message });
       } else {
         req.session.user = user.handle;
-
-        res.status(200).end();
+        res.status(200).json(user);
       }
     });
   });

@@ -39,5 +39,16 @@ module.exports = {
       handle: userHandle,
       avatars: avatars
     };
+  },
+
+  generateRandomAvatar: (handle) => {
+    const avatarUrlPrefix = `https://vanillicon.com/${md5(handle)}`;
+    const avatars = {
+      small:   `${avatarUrlPrefix}_50.png`,
+      regular: `${avatarUrlPrefix}.png`,
+      large:   `${avatarUrlPrefix}_200.png`
+    };
+    return avatars;
   }
+
 };

@@ -5,19 +5,20 @@ $(document).ready(function() {
   let registerButton = $(".register .submitButton");
   let register = $(".register");
   let logoutButton = $(".logoutButton");
-  let userLoggedIn = false;
+  let user = {};
+  // let userLoggedIn = false;
 
-  if (userLoggedIn === true) {
-    composeButton.show();
-    logoutButton.show();
-    login.hide();
-    register.hide();
-  } else {
-    composeButton.hide();
-    logoutButton.hide();
-    login.show();
-    register.show();
-  }
+  // if (userLoggedIn === true) {
+  //   composeButton.show();
+  //   logoutButton.show();
+  //   login.hide();
+  //   register.hide();
+  // } else {
+  //   composeButton.hide();
+  //   logoutButton.hide();
+  //   login.show();
+  //   register.show();
+  // }
 
   function createTweetElement(tweet) {
     let date = new Date(tweet.created_at).toString().slice(0, 15);
@@ -53,11 +54,11 @@ $(document).ready(function() {
       $.ajax({
         url: "/tweets/",
         type: "GET",
-        success: function (data) {
-          console.log("Success: ", data);
+        success: function (tweets) {
+          console.log("Success: ", tweets);
           // need to loop through data which is array of objects (tweets)
           // and check if user handle is in tweets
-          renderTweets(data);
+          renderTweets(tweets);
         }
       });
     });
@@ -100,9 +101,9 @@ $(document).ready(function() {
           $.ajax({
             url: "/tweets/",
             type: "POST",
-            data: tweetData,
-            success: function(newTweet) {
-              console.log("Success", newTweet);
+            data: tweetData, // need to push user so that req.body.user is recognized by POST / route - json object with tweet body text and userinfo?
+            success: function() {
+              console.log("Success");
               loadTweets();
             }
           });
@@ -111,8 +112,8 @@ $(document).ready(function() {
             url: "/tweets/",
             type: "POST",
             data: tweetData,
-            success: function(newTweet) {
-              console.log("Success", newTweet);
+            success: function() {
+              console.log("Success");
               loadTweets();
             }
           });
@@ -120,13 +121,6 @@ $(document).ready(function() {
       }
     });
   });
-
-  function getUsers() {
-    $(function() {
-      console.log("Getting users from mongodb");
-
-    });
-  }
 
   // Slide toggle new tweet div
   $(function() {
@@ -137,7 +131,7 @@ $(document).ready(function() {
     });
   });
 
-  // Submit register
+  // Register
   $(function() {
     registerButton.click(function() {
       let userData = $(".register").serialize();
@@ -152,7 +146,6 @@ $(document).ready(function() {
           if ($("alert")) {
             $("alert").remove();
           }
-          userLoggedIn = true;
           composeButton.show();
           logoutButton.show();
           login.hide();
@@ -187,17 +180,17 @@ $(document).ready(function() {
         url: "/tweets/login",
         type: "POST",
         data: userData,
-        success: function() {
+        success: function(user) {
+          user = user;
+          console.log(user)
           if ($("alert")) {
             $("alert").remove();
           }
           console.log("Successful login");
-          userLoggedIn = true;
           composeButton.show();
           logoutButton.show();
           login.hide();
           register.hide();
-          loadTweets();
         },
         error: function() {
           console.log("Unsuccessful login - user doesn't exist");
@@ -221,7 +214,6 @@ $(document).ready(function() {
         type: "POST",
         success: function() {
           console.log("Successful logout");
-          userLoggedIn = false;
           composeButton.hide();
           logoutButton.hide();
           login.show();

@@ -10,12 +10,12 @@ module.exports = function makeDataHelpers(db) {
     // Saves a tweet to 'tweets' collection
     saveTweet: function(newTweet, callback) {
       tweets
-        .insertOne(newTweet, (err, result) => {
+        .insertOne(newTweet, (err, tweet) => {
           if (err) {
             return callback(err);
           }
           console.log("Inserted a document into the tweets collection.");
-          callback();
+          callback(null, tweet);
         });
     },
 
